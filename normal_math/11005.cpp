@@ -12,11 +12,11 @@ int main(){
 
 
     
-    while(quo>1){
+    while(quo != 0){
         int rem =0;
         
         rem = quo%B;
-        quo = quo/B;
+        quo /= B;
         
         if(rem>9){
             char word;
