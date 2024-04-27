@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <cmath>
+
 using namespace std;
 
 int main(){
@@ -10,21 +10,23 @@ int main(){
     string result;
     int quo = N;
 
-    while(quo>B){
+
+    
+    while(quo>1){
         int rem =0;
         
         rem = quo%B;
-        quo = N/B;
-
+        quo = quo/B;
+        
         if(rem>9){
-            string word;
+            char word;
             word = rem + 55;
-            result = result.append(word);
+            result += word;
         }
         else{
             string word;
-            word = rem;
-            result = result.append(word);
+            word = to_string(rem);
+            result += word;
         }
     }
 
